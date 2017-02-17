@@ -1,0 +1,12 @@
+{
+    "name": "incenteev/hashed-asset-bundle",
+    "description": "Apply an asset version based on a hash of the asset for symfony/asset",
+    "keywords": ["symfony", "symfony-bundle", "bundle", "assets", "cache-busting"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christophe Coevoet",
+            "email": "stof@notk.org"
+        }
+    ]
+}
