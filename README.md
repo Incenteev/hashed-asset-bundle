@@ -43,6 +43,23 @@ framework:
         version_strategy: incenteev_hashed_asset.strategy
 ```
 
+## Advanced configuration
+
+The default configuration should fit common needs, but the bundle exposes
+a few configuration settings in case you need them:
+
+```yaml
+incenteev_hashed_asset:
+    # Absolute path to the folder in which assets can be found
+    # Note: in case you apply a base_path in your asset package, it is not
+    # yet applied to the string received by the bundle
+    web_root: '%kernel.root_dir%/../web'
+    # Format used to apply the version. This is equivalent to the
+    # `framework > assets > version_format` of the static version strategy
+    # of FrameworkBundle.
+    version_format: '%%s.%%s'
+```
+
 ## License
 
 This bundle is under the [MIT license](LICENSE).
