@@ -8,5 +8,30 @@
             "name": "Christophe Coevoet",
             "email": "stof@notk.org"
         }
-    ]
+    ],
+    "require": {
+        "php": "^7.0",
+        "symfony/asset": "^2.8 || ^3.0",
+        "symfony/config": "^2.8 || ^3.0",
+        "symfony/dependency-injection": "^2.8 || ^3.0",
+        "symfony/http-kernel": "^2.8 || ^3.0"
+    },
+    "require-dev": {
+        "symfony/phpunit-bridge": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Incenteev\\HashedAssetBundle\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Incenteev\\HashedAssetBundle\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
 }
