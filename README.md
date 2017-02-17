@@ -64,6 +64,13 @@ incenteev_hashed_asset:
 
 This bundle is under the [MIT license](LICENSE).
 
+## Alternative projects
+
+If you want to apply cache busting by renaming files in your asset pipeline
+(for instance with the `gulp-rev` plugin), have a look at
+https://github.com/irozgar/gulp-rev-versions-bundle which processes a
+manifest file.
+
 ## Reporting an issue or a feature request
 
 Issues and feature requests are tracked in the [Github issue tracker](https://github.com/Incenteev/hashed-asset-bundle/issues).
