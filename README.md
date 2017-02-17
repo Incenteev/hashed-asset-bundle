@@ -51,7 +51,7 @@ Here is the workaround:
 framework:
     assets:
         version: dummy # set a dummy version so that the package does not use the empty version
-        
+
 services:
     assets._version__default:
         alias: incenteev_hashed_asset.strategy
@@ -72,7 +72,7 @@ incenteev_hashed_asset:
     # Format used to apply the version. This is equivalent to the
     # `framework > assets > version_format` of the static version strategy
     # of FrameworkBundle.
-    version_format: '%%s.%%s'
+    version_format: '%%s?%%s'
 ```
 
 ## License
