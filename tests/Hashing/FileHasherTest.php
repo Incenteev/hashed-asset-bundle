@@ -22,6 +22,7 @@ class FileHasherTest extends TestCase
         yield ['asset1.txt', 'd0c0575'];
         yield ['asset2.txt', 'c1cf85a'];
         yield ['/asset2.txt', 'c1cf85a'];
+        yield ['subdir/asset3.txt', 'd0c0575'];
         yield ['asset3.txt', ''];
     }
 }
