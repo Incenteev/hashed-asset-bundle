@@ -16,10 +16,13 @@ class IncenteevHashedAssetExtensionTest extends TestCase
         $extension->load(array(array()), $container);
 
         $this->assertHasDefinition($container, 'incenteev_hashed_asset.strategy');
-        $def = $container->getDefinition('incenteev_hashed_asset.strategy');
+        $this->assertHasDefinition($container, 'incenteev_hashed_asset.file_hasher');
 
-        $this->assertEquals('%kernel.root_dir%/../web', $def->getArgument(0));
-        $this->assertEquals('%%s?%%s', $def->getArgument(1));
+        $fileHasherDef = $container->getDefinition('incenteev_hashed_asset.file_hasher');
+        $strategyDef = $container->getDefinition('incenteev_hashed_asset.strategy');
+
+        $this->assertEquals('%kernel.root_dir%/../web', $fileHasherDef->getArgument(0));
+        $this->assertEquals('%%s?%%s', $strategyDef->getArgument(1));
     }
 
     public function testConfigured()
@@ -33,10 +36,13 @@ class IncenteevHashedAssetExtensionTest extends TestCase
         )), $container);
 
         $this->assertHasDefinition($container, 'incenteev_hashed_asset.strategy');
-        $def = $container->getDefinition('incenteev_hashed_asset.strategy');
+        $this->assertHasDefinition($container, 'incenteev_hashed_asset.file_hasher');
 
-        $this->assertEquals('/var/html/test', $def->getArgument(0));
-        $this->assertEquals('%%s?v=%%s', $def->getArgument(1));
+        $fileHasherDef = $container->getDefinition('incenteev_hashed_asset.file_hasher');
+        $strategyDef = $container->getDefinition('incenteev_hashed_asset.strategy');
+
+        $this->assertEquals('/var/html/test', $fileHasherDef->getArgument(0));
+        $this->assertEquals('%%s?v=%%s', $strategyDef->getArgument(1));
     }
 
     private function assertHasDefinition(ContainerBuilder $containerBuilder, string $id)
