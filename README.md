@@ -43,21 +43,6 @@ framework:
         version_strategy: incenteev_hashed_asset.strategy
 ```
 
-If you are using Symfony <3.1, this configuration setting is not available.
-Here is the workaround:
-
-```yaml
-# app/config/config.yml
-framework:
-    assets:
-        version: dummy # set a dummy version so that the package does not use the empty version
-
-services:
-    assets._version__default:
-        alias: incenteev_hashed_asset.strategy
-# If you use additional packages, you may need to create additional aliases for other packages than `_default`
-```
-
 ## Advanced configuration
 
 The default configuration should fit common needs, but the bundle exposes
