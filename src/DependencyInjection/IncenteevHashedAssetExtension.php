@@ -17,8 +17,17 @@ class IncenteevHashedAssetExtension extends ConfigurableExtension
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
 
+        $container->getDefinition('incenteev_hashed_asset.file_hasher')
+            ->replaceArgument(0, $config['web_root']);
+
         $container->getDefinition('incenteev_hashed_asset.strategy')
-            ->replaceArgument(0, $config['web_root'])
             ->replaceArgument(1, $config['version_format']);
+
+        if (!$container->getParameter('kernel.debug')) {
+            $loader->load('cache.xml');
+
+            $container->getDefinition('incenteev_hashed_asset.asset_finder')
+                ->replaceArgument(0, $config['web_root']);
+        }
     }
 }

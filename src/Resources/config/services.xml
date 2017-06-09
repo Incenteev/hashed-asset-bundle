@@ -6,7 +6,13 @@
 
     <services>
         <service id="incenteev_hashed_asset.strategy" class="Incenteev\HashedAssetBundle\Asset\HashingVersionStrategy" public="false">
+            <argument type="service" id="incenteev_hashed_asset.asset_hasher" />
             <argument />
+        </service>
+
+        <service id="incenteev_hashed_asset.asset_hasher" alias="incenteev_hashed_asset.file_hasher" public="false" />
+
+        <service id="incenteev_hashed_asset.file_hasher" class="Incenteev\HashedAssetBundle\Hashing\FileHasher" public="false">
             <argument />
         </service>
     </services>
