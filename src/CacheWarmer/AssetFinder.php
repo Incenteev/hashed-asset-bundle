@@ -5,6 +5,9 @@ namespace Incenteev\HashedAssetBundle\CacheWarmer;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Finder\SplFileInfo;
 
+/**
+ * @internal
+ */
 class AssetFinder
 {
     private $webRoot;
