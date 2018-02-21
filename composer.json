@@ -2,6 +2,7 @@
     "name": "incenteev/hashed-asset-bundle",
     "description": "Apply an asset version based on a hash of the asset for symfony/asset",
     "keywords": ["symfony", "symfony-bundle", "bundle", "assets", "cache-busting"],
+    "type": "symfony-bundle",
     "license": "MIT",
     "authors": [
         {
