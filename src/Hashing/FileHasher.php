@@ -10,6 +10,7 @@ final class FileHasher implements AssetHasherInterface
     {
         $this->webRoot = $webRoot;
     }
+
     public function computeHash(string $path): string
     {
         $fullPath = $this->webRoot.'/'.ltrim($path, '/');
