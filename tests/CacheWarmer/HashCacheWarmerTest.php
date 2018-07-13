@@ -8,6 +8,7 @@ use Incenteev\HashedAssetBundle\Hashing\AssetHasherInterface;
 use PHPUnit\Framework\TestCase;
 use Psr\Cache\CacheItemPoolInterface;
 use Symfony\Component\Cache\Adapter\ArrayAdapter;
+use Symfony\Component\Cache\Adapter\PhpArrayAdapter;
 
 class HashCacheWarmerTest extends TestCase
 {
@@ -30,12 +31,17 @@ class HashCacheWarmerTest extends TestCase
 
         $this->assertFileExists($file);
 
-        $values = require $file;
+        $cacheAdapter = new PhpArrayAdapter($file, new ArrayAdapter());
 
-        $this->assertInternalType('array', $values);
-        $this->assertCount(2, $values);
-        $this->assertArrayHasKey(base64_encode('foo'), $values);
-        $this->assertArrayHasKey(base64_encode('bar/baz.js'), $values);
+        $fooItem = $cacheAdapter->getItem(base64_encode('foo'));
+
+        $this->assertTrue($fooItem->isHit());
+        $this->assertSame('foohash', $fooItem->get());
+
+        $bazItem = $cacheAdapter->getItem(base64_encode('bar/baz.js'));
+
+        $this->assertTrue($bazItem->isHit());
+        $this->assertSame('bazhash', $bazItem->get());
 
         $values = $fallbackPool->getValues();
 
