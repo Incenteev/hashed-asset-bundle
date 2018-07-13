@@ -13,8 +13,14 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('incenteev_hashed_asset');
+        $treeBuilder = new TreeBuilder('incenteev_hashed_asset');
+
+        if (\method_exists($treeBuilder, 'getRootNode')) {
+            $rootNode = $treeBuilder->getRootNode();
+        } else {
+            // BC layer for symfony/config 4.1 and older
+            $rootNode = $treeBuilder->root('incenteev_hashed_asset');
+        }
 
         $rootNode->children()
             ->scalarNode('web_root')->defaultValue(\class_exists(Recipe::class) ? '%kernel.project_dir%/public' : '%kernel.root_dir%/../web')->end()
