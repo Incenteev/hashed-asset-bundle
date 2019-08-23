@@ -52,7 +52,7 @@ final class HashCacheWarmer implements CacheWarmerInterface
         $this->fallbackPool->commit();
     }
 
-    public function isOptional()
+    public function isOptional(): bool
     {
         return true;
     }

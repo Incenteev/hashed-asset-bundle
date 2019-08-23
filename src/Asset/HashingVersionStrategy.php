@@ -16,12 +16,12 @@ class HashingVersionStrategy implements VersionStrategyInterface
         $this->hasher = $hasher;
     }
 
-    public function getVersion($path)
+    public function getVersion($path): string
     {
         return $this->hasher->computeHash($path);
     }
 
-    public function applyVersion($path)
+    public function applyVersion($path): string
     {
         $versionized = sprintf($this->format, ltrim($path, '/'), $this->hasher->computeHash($path));
 
