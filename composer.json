@@ -21,7 +21,7 @@
         "symfony/http-kernel": "^3.2 || ^4.0"
     },
     "require-dev": {
-        "symfony/phpunit-bridge": "^4.0"
+        "symfony/phpunit-bridge": "^4.3"
     },
     "autoload": {
         "psr-4": {
