@@ -45,7 +45,7 @@ class HashCacheWarmerTest extends TestCase
 
         $values = $fallbackPool->getValues();
 
-        $this->assertInternalType('array', $values);
+        $this->assertIsArray($values);
         $this->assertCount(2, $values);
         $this->assertArrayHasKey(base64_encode('foo'), $values);
         $this->assertArrayHasKey(base64_encode('bar/baz.js'), $values);
