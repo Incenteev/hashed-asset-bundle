@@ -53,7 +53,7 @@ incenteev_hashed_asset:
     # Absolute path to the folder in which assets can be found
     # Note: in case you apply a base_path in your asset package, it is not
     # yet applied to the string received by the bundle
-    web_root: '%kernel.root_dir%/../web'
+    web_root: '%kernel.project_dir%/web'
     # Format used to apply the version. This is equivalent to the
     # `framework > assets > version_format` of the static version strategy
     # of FrameworkBundle.
@@ -67,9 +67,8 @@ This bundle is under the [MIT license](LICENSE).
 ## Alternative projects
 
 If you want to apply cache busting by renaming files in your asset pipeline
-(for instance with the `gulp-rev` plugin), have a look at
-https://github.com/irozgar/gulp-rev-versions-bundle which processes a
-manifest file.
+(for instance with the webpack-encore versioning feature), have a look at the
+`json_manifest` strategy available in Symfony itself.
 
 ## Reporting an issue or a feature request
 
