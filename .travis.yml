@@ -1,31 +1,25 @@
 language: php
 
-sudo: false
-
 env:
   global:
     - SYMFONY_PHPUNIT_REMOVE=symfony/yaml
 
 php:
-  - 7.0
-  - 7.1
   - 7.2
   - 7.3
-  - 7.4snapshot
+  - 7.4
 
 matrix:
   fast_finish: true
   include:
-    - php: 7.0
+    - php: 7.2
       env: COMPOSER_FLAGS="--prefer-lowest" SYMFONY_DEPRECATIONS_HELPER=weak
     # Test LTS versions
-    - php: 7.1
+    - php: 7.2
       env: DEPENDENCIES="dunglas/symfony-lock:^3"
     # Test unstable versions
-    - php: 7.3
+    - php: 7.4
       env: STABILITY="dev"
-  allow_failures:
-    - php: 7.4snapshot
 
 cache:
   directories:
