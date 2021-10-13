@@ -11,17 +11,19 @@
         }
     ],
     "require": {
-        "php": ">=7.2",
-        "symfony/asset": "^3.4.36 || ^4.3 || ^5.0",
-        "symfony/cache": "^3.4.36 || ^4.3 || ^5.0",
-        "symfony/config": "^3.4.36 || ^4.3 || ^5.0",
-        "symfony/dependency-injection": "^3.4.36 || ^4.3 || ^5.0",
-        "symfony/finder": "^3.4.36 || ^4.3 || ^5.0",
-        "symfony/framework-bundle": "^3.4.36 || ^4.3 || ^5.0",
-        "symfony/http-kernel": "^3.4.36 || ^4.3 || ^5.0"
+        "php": ">=7.4",
+        "symfony/asset": "^3.4.36 || ^4.4.13 || ^5.3",
+        "symfony/cache": "^3.4.36 || ^4.4.13 || ^5.3",
+        "symfony/config": "^3.4.36 || ^4.4 || ^5.3",
+        "symfony/dependency-injection": "^3.4.36 || ^4.4.13 || ^5.3",
+        "symfony/finder": "^3.4.36 || ^4.4.13 || ^5.3",
+        "symfony/framework-bundle": "^3.4.36 || ^4.3.13 || ^5.3",
+        "symfony/http-kernel": "^3.4.36 || ^4.4.13 || ^5.3"
     },
     "require-dev": {
-        "symfony/phpunit-bridge": "^5.2"
+        "phpspec/prophecy-phpunit": "^2.0",
+        "phpunit/phpunit": "^9.5",
+        "symfony/phpunit-bridge": "^5.3"
     },
     "autoload": {
         "psr-4": {
@@ -32,6 +34,9 @@
         "psr-4": {
             "Incenteev\\HashedAssetBundle\\Tests\\": "tests"
         }
+    },
+    "config": {
+        "sort-packages": true
     },
     "extra": {
         "branch-alias": {

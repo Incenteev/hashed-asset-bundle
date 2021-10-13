@@ -5,9 +5,12 @@ namespace Incenteev\HashedAssetBundle\Tests\Asset;
 use Incenteev\HashedAssetBundle\Asset\HashingVersionStrategy;
 use Incenteev\HashedAssetBundle\Hashing\AssetHasherInterface;
 use PHPUnit\Framework\TestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
 
 class HashingVersionStrategyTest extends TestCase
 {
+    use ProphecyTrait;
+
     public function testGetVersion()
     {
         $hasher = $this->prophesize(AssetHasherInterface::class);

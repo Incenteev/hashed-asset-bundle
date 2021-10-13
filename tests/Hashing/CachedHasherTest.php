@@ -5,10 +5,13 @@ namespace Incenteev\HashedAssetBundle\Tests\Hashing;
 use Incenteev\HashedAssetBundle\Hashing\AssetHasherInterface;
 use Incenteev\HashedAssetBundle\Hashing\CachedHasher;
 use PHPUnit\Framework\TestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
 use Symfony\Component\Cache\Adapter\ArrayAdapter;
 
 class CachedHasherTest extends TestCase
 {
+    use ProphecyTrait;
+
     public function testComputeHash()
     {
         $delegateHasher = $this->prophesize(AssetHasherInterface::class);
