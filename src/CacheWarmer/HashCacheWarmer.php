@@ -31,7 +31,7 @@ final class HashCacheWarmer implements CacheWarmerInterface
         $this->fallbackPool = $fallbackPool;
     }
 
-    public function warmUp($cacheDir)
+    public function warmUp($cacheDir): array
     {
         $phpArrayPool = new PhpArrayAdapter($this->cacheFile, $this->fallbackPool);
         $arrayPool = new ArrayAdapter(0, false);
@@ -50,6 +50,8 @@ final class HashCacheWarmer implements CacheWarmerInterface
             $this->fallbackPool->saveDeferred($item->set($v));
         }
         $this->fallbackPool->commit();
+
+        return [];
     }
 
     public function isOptional(): bool
