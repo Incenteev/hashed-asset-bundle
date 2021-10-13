@@ -21,6 +21,8 @@
         "symfony/http-kernel": "^3.4.36 || ^4.4.13 || ^5.3"
     },
     "require-dev": {
+        "phpspec/prophecy-phpunit": "^2.0",
+        "phpunit/phpunit": "^9.5",
         "symfony/phpunit-bridge": "^5.3"
     },
     "autoload": {
@@ -32,6 +34,9 @@
         "psr-4": {
             "Incenteev\\HashedAssetBundle\\Tests\\": "tests"
         }
+    },
+    "config": {
+        "sort-packages": true
     },
     "extra": {
         "branch-alias": {

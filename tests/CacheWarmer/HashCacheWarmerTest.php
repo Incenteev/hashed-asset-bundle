@@ -6,12 +6,15 @@ use Incenteev\HashedAssetBundle\CacheWarmer\AssetFinder;
 use Incenteev\HashedAssetBundle\CacheWarmer\HashCacheWarmer;
 use Incenteev\HashedAssetBundle\Hashing\AssetHasherInterface;
 use PHPUnit\Framework\TestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
 use Psr\Cache\CacheItemPoolInterface;
 use Symfony\Component\Cache\Adapter\ArrayAdapter;
 use Symfony\Component\Cache\Adapter\PhpArrayAdapter;
 
 class HashCacheWarmerTest extends TestCase
 {
+    use ProphecyTrait;
+
     public function testWarmUp()
     {
         $hasher = $this->prophesize(AssetHasherInterface::class);
@@ -49,7 +52,7 @@ class HashCacheWarmerTest extends TestCase
             $this->assertIsArray($values);
         } else {
             $this->assertInternalType('array', $values);
-        }   
+        }
         $this->assertCount(2, $values);
         $this->assertArrayHasKey(base64_encode('foo'), $values);
         $this->assertArrayHasKey(base64_encode('bar/baz.js'), $values);
