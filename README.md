@@ -5,7 +5,7 @@ The HashedAssetBundle provides an asset version strategy which uses a hash
 of the file content as asset version. This allows bumping the asset version
 separately for each asset (automatically).
 
-[![Build Status](https://travis-ci.org/Incenteev/hashed-asset-bundle.svg?branch=master)](https://travis-ci.org/Incenteev/hashed-asset-bundle) [![Total Downloads](https://poser.pugx.org/incenteev/hashed-asset-bundle/downloads.svg)](https://packagist.org/packages/incenteev/hashed-asset-bundle) [![Latest Stable Version](https://poser.pugx.org/incenteev/hashed-asset-bundle/v/stable.svg)](https://packagist.org/packages/incenteev/hashed-asset-bundle)
+[![CI](https://github.com/Incenteev/hashed-asset-bundle/actions/workflows/ci.yml/badge.svg)](https://github.com/Incenteev/hashed-asset-bundle/actions/workflows/ci.yml) [![Total Downloads](https://poser.pugx.org/incenteev/hashed-asset-bundle/downloads.svg)](https://packagist.org/packages/incenteev/hashed-asset-bundle) [![Latest Stable Version](https://poser.pugx.org/incenteev/hashed-asset-bundle/v/stable.svg)](https://packagist.org/packages/incenteev/hashed-asset-bundle)
 
 ## Installation
 
