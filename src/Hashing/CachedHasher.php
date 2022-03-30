@@ -6,8 +6,8 @@ use Psr\Cache\CacheItemPoolInterface;
 
 final class CachedHasher implements AssetHasherInterface
 {
-    private $hasher;
-    private $cache;
+    private AssetHasherInterface $hasher;
+    private CacheItemPoolInterface $cache;
 
     public function __construct(AssetHasherInterface $hasher, CacheItemPoolInterface $cache)
     {
