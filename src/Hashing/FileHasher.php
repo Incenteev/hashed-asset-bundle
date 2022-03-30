@@ -4,7 +4,7 @@ namespace Incenteev\HashedAssetBundle\Hashing;
 
 final class FileHasher implements AssetHasherInterface
 {
-    private $webRoot;
+    private string $webRoot;
 
     public function __construct(string $webRoot)
     {

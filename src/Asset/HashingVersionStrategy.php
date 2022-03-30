@@ -7,8 +7,8 @@ use Symfony\Component\Asset\VersionStrategy\VersionStrategyInterface;
 
 class HashingVersionStrategy implements VersionStrategyInterface
 {
-    private $hasher;
-    private $format;
+    private AssetHasherInterface $hasher;
+    private string $format;
 
     public function __construct(AssetHasherInterface $hasher, string $format = null)
     {

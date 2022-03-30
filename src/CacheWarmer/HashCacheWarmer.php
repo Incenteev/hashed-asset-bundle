@@ -13,10 +13,10 @@ use Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerInterface;
 
 final class HashCacheWarmer implements CacheWarmerInterface
 {
-    private $assetFinder;
-    private $cacheFile;
-    private $hasher;
-    private $fallbackPool;
+    private AssetFinder $assetFinder;
+    private string $cacheFile;
+    private AssetHasherInterface $hasher;
+    private AdapterInterface $fallbackPool;
 
     public function __construct(AssetFinder $assetFinder, string $cacheFile, AssetHasherInterface $hasher, CacheItemPoolInterface $fallbackPool)
     {

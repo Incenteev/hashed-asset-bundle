@@ -10,7 +10,7 @@ use Symfony\Component\Finder\SplFileInfo;
  */
 class AssetFinder
 {
-    private $webRoot;
+    private string $webRoot;
 
     public function __construct(string $webRoot)
     {
