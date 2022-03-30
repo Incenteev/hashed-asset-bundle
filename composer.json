@@ -12,13 +12,13 @@
     ],
     "require": {
         "php": ">=7.4",
-        "symfony/asset": "^3.4.36 || ^4.4.13 || ^5.3 || ^6.0",
-        "symfony/cache": "^3.4.36 || ^4.4.13 || ^5.3 || ^6.0",
-        "symfony/config": "^3.4.36 || ^4.4 || ^5.3 || ^6.0",
-        "symfony/dependency-injection": "^3.4.36 || ^4.4.13 || ^5.3 || ^6.0",
-        "symfony/finder": "^3.4.36 || ^4.4.13 || ^5.3 || ^6.0",
-        "symfony/framework-bundle": "^3.4.36 || ^4.3.13 || ^5.3 || ^6.0",
-        "symfony/http-kernel": "^3.4.36 || ^4.4.13 || ^5.3 || ^6.0"
+        "symfony/asset": "^4.4.13 || ^5.3 || ^6.0",
+        "symfony/cache": "^4.4.13 || ^5.3 || ^6.0",
+        "symfony/config": "^4.4 || ^5.3 || ^6.0",
+        "symfony/dependency-injection": "^4.4.13 || ^5.3 || ^6.0",
+        "symfony/finder": "^4.4.13 || ^5.3 || ^6.0",
+        "symfony/framework-bundle": "^4.4.13 || ^5.3 || ^6.0",
+        "symfony/http-kernel": "^4.4.13 || ^5.3 || ^6.0"
     },
     "require-dev": {
         "phpspec/prophecy-phpunit": "^2.0",
