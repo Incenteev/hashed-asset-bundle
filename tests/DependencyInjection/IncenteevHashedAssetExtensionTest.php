@@ -22,7 +22,7 @@ class IncenteevHashedAssetExtensionTest extends TestCase
         $fileHasherDef = $container->getDefinition('incenteev_hashed_asset.file_hasher');
         $strategyDef = $container->getDefinition('incenteev_hashed_asset.strategy');
 
-        $this->assertEquals('%kernel.root_dir%/../web', $fileHasherDef->getArgument(0));
+        $this->assertEquals('%kernel.project_dir%/web', $fileHasherDef->getArgument(0));
         $this->assertEquals('%%s?%%s', $strategyDef->getArgument(1));
     }
 
