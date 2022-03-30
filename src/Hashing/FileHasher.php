@@ -19,6 +19,12 @@ final class FileHasher implements AssetHasherInterface
             return '';
         }
 
-        return substr(sha1_file($fullPath), 0, 7);
+        $hash = sha1_file($fullPath);
+
+        if ($hash === false) {
+            return '';
+        }
+
+        return substr($hash, 0, 7);
     }
 }

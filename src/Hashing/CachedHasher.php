@@ -21,7 +21,11 @@ final class CachedHasher implements AssetHasherInterface
         $item = $this->cache->getItem(base64_encode(ltrim($path, '/')));
 
         if ($item->isHit()) {
-            return $item->get();
+            $cachedHash = $item->get();
+
+            if (\is_string($cachedHash)) {
+                return $cachedHash;
+            }
         }
 
         $hash = $this->hasher->computeHash($path);

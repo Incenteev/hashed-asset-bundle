@@ -10,7 +10,7 @@ class FileHasherTest extends TestCase
     /**
      * @dataProvider getAssetVersions
      */
-    public function testComputeHash($path, $version)
+    public function testComputeHash(string $path, string $version)
     {
         $versionStrategy = new FileHasher(__DIR__.'/fixtures');
 

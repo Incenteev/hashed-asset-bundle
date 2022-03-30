@@ -65,7 +65,7 @@ class IncenteevHashedAssetExtensionTest extends TestCase
         $this->assertEquals('/var/html/test', $assetFinderDef->getArgument(0));
     }
 
-    private function assertHasDefinition(ContainerBuilder $containerBuilder, string $id)
+    private function assertHasDefinition(ContainerBuilder $containerBuilder, string $id): void
     {
         $this->assertTrue($containerBuilder->hasDefinition($id), sprintf('The container has a `%s` service definition.', $id));
     }
