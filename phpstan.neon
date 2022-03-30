@@ -1,0 +1,16 @@
+parameters:
+    level: max
+    paths:
+        - src/
+        - tests/
+    ignoreErrors:
+        - '#^Method Incenteev\\HashedAssetBundle\\Tests\\[^:]++\:\:test\w++\(\) has no return type specified\.$#'
+        - '#^Method Incenteev\\HashedAssetBundle\\Tests\\[^:]++\:\:get\w++\(\) has no return type specified\.$#'
+
+includes:
+    - vendor/phpstan/phpstan-deprecation-rules/rules.neon
+    - vendor/phpstan/phpstan-phpunit/extension.neon
+    - vendor/phpstan/phpstan-phpunit/rules.neon
+    - vendor/phpstan/phpstan-symfony/extension.neon
+    - vendor/phpstan/phpstan-symfony/rules.neon
+    - vendor/jangregor/phpstan-prophecy/extension.neon

@@ -24,7 +24,7 @@ class HashingVersionStrategyTest extends TestCase
     /**
      * @dataProvider getVersionedAssets
      */
-    public function testApplyVersion($path, $expected, $hash, $format = null)
+    public function testApplyVersion(string $path, string $expected, string $hash, ?string $format = null)
     {
         $hasher = $this->prophesize(AssetHasherInterface::class);
         $hasher->computeHash($path)->willReturn($hash);

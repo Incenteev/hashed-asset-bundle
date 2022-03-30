@@ -10,9 +10,9 @@ use Symfony\Component\HttpKernel\DependencyInjection\ConfigurableExtension;
 class IncenteevHashedAssetExtension extends ConfigurableExtension
 {
     /**
-     * {@inheritdoc}
+     * @param array{web_root: string, version_format: string} $config
      */
-    protected function loadInternal(array $config, ContainerBuilder $container)
+    protected function loadInternal(array $config, ContainerBuilder $container): void
     {
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');

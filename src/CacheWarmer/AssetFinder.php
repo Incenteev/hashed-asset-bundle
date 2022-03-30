@@ -17,6 +17,9 @@ class AssetFinder
         $this->webRoot = $webRoot;
     }
 
+    /**
+     * @return \Traversable<string>
+     */
     public function getAssetPaths(): \Traversable
     {
         $finder = (new Finder())->files()

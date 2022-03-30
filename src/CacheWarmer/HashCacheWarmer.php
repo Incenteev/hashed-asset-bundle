@@ -31,6 +31,11 @@ final class HashCacheWarmer implements CacheWarmerInterface
         $this->fallbackPool = $fallbackPool;
     }
 
+    /**
+     * @param string $cacheDir
+     *
+     * @return string[]
+     */
     public function warmUp($cacheDir): array
     {
         $phpArrayPool = new PhpArrayAdapter($this->cacheFile, $this->fallbackPool);
