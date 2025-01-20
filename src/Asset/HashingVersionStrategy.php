@@ -10,7 +10,7 @@ class HashingVersionStrategy implements VersionStrategyInterface
     private AssetHasherInterface $hasher;
     private string $format;
 
-    public function __construct(AssetHasherInterface $hasher, string $format = null)
+    public function __construct(AssetHasherInterface $hasher, ?string $format = null)
     {
         $this->format = $format ?: '%s?%s';
         $this->hasher = $hasher;
