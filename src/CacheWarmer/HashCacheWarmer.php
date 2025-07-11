@@ -36,7 +36,7 @@ final class HashCacheWarmer implements CacheWarmerInterface
      *
      * @return string[]
      */
-    public function warmUp($cacheDir, string $buildDir = null): array
+    public function warmUp($cacheDir, ?string $buildDir = null): array
     {
         $phpArrayPool = new PhpArrayAdapter($this->cacheFile, $this->fallbackPool);
         $arrayPool = new ArrayAdapter(0, false);
