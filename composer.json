@@ -27,7 +27,7 @@
         "phpstan/phpstan-deprecation-rules": "^1.0",
         "phpstan/phpstan-phpunit": "^1.0",
         "phpstan/phpstan-symfony": "^1.1",
-        "phpunit/phpunit": "^9.5",
+        "phpunit/phpunit": "^9.6.29",
         "symfony/phpunit-bridge": "^7.3.4"
     },
     "autoload": {
