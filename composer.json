@@ -21,12 +21,12 @@
         "symfony/http-kernel": "^6.4 || ^7.0"
     },
     "require-dev": {
-        "jangregor/phpstan-prophecy": "^1.0",
+        "jangregor/phpstan-prophecy": "^2.2",
         "phpspec/prophecy-phpunit": "^2.0",
-        "phpstan/phpstan": "^1.5",
-        "phpstan/phpstan-deprecation-rules": "^1.0",
-        "phpstan/phpstan-phpunit": "^1.0",
-        "phpstan/phpstan-symfony": "^1.1",
+        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-deprecation-rules": "^2.0",
+        "phpstan/phpstan-phpunit": "^2.0",
+        "phpstan/phpstan-symfony": "^2.0",
         "phpunit/phpunit": "^9.6.29",
         "symfony/phpunit-bridge": "^7.3.4",
         "webmozart/assert": "^1.12"
