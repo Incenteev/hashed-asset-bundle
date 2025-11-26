@@ -11,14 +11,14 @@
         }
     ],
     "require": {
-        "php": ">=7.4",
-        "symfony/asset": "^4.4.13 || ^5.3 || ^6.0 || ^7.0",
-        "symfony/cache": "^4.4.13 || ^5.3 || ^6.0 || ^7.0",
+        "php": ">=8.2",
+        "symfony/asset": "^6.4 || ^7.0",
+        "symfony/cache": "^6.4 || ^7.0",
         "symfony/config": "^4.4 || ^5.3 || ^6.0 || ^7.0",
-        "symfony/dependency-injection": "^4.4.13 || ^5.3 || ^6.0 || ^7.0",
-        "symfony/finder": "^4.4.13 || ^5.3 || ^6.0 || ^7.0",
-        "symfony/framework-bundle": "^4.4.13 || ^5.3 || ^6.0 || ^7.0",
-        "symfony/http-kernel": "^4.4.13 || ^5.3 || ^6.0 || ^7.0"
+        "symfony/dependency-injection": "^6.4 || ^7.0",
+        "symfony/finder": "^6.4 || ^7.0",
+        "symfony/framework-bundle": "^6.4 || ^7.0",
+        "symfony/http-kernel": "^6.4 || ^7.0"
     },
     "require-dev": {
         "jangregor/phpstan-prophecy": "^1.0",
@@ -27,8 +27,9 @@
         "phpstan/phpstan-deprecation-rules": "^1.0",
         "phpstan/phpstan-phpunit": "^1.0",
         "phpstan/phpstan-symfony": "^1.1",
-        "phpunit/phpunit": "^9.5",
-        "symfony/phpunit-bridge": "^5.3 || ^6.0 || ^7.0"
+        "phpunit/phpunit": "^9.6.29",
+        "symfony/phpunit-bridge": "^7.3.4",
+        "webmozart/assert": "^1.12"
     },
     "autoload": {
         "psr-4": {
