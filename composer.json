@@ -14,11 +14,11 @@
         "php": ">=8.2",
         "symfony/asset": "^6.4 || ^7.0 || ^8.9",
         "symfony/cache": "^6.4 || ^7.0 || ^8.9",
-        "symfony/config": "^4.4 || ^5.3 || ^6.0 || ^7.0 || ^8.9",
-        "symfony/dependency-injection": "^6.4 || ^7.0 || ^8.9",
-        "symfony/finder": "^6.4 || ^7.0 || ^8.9",
-        "symfony/framework-bundle": "^6.4 || ^7.0 || ^8.9",
-        "symfony/http-kernel": "^6.4 || ^7.0 || ^8.9"
+        "symfony/config": "^4.4 || ^5.3 || ^6.0 || ^7.0 || ^8.0",
+        "symfony/dependency-injection": "^6.4 || ^7.0 || ^8.0",
+        "symfony/finder": "^6.4 || ^7.0 || ^8.0",
+        "symfony/framework-bundle": "^6.4 || ^7.0 || ^8.0",
+        "symfony/http-kernel": "^6.4 || ^7.0 || ^8.0"
     },
     "require-dev": {
         "jangregor/phpstan-prophecy": "^2.2",
